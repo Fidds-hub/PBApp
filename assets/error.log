@@ -1,0 +1,30 @@
+
+----------------------------------------------------------------------
+2026-07-22 14:48:41  UNCAUGHT
+Traceback (most recent call last):
+  File "C:\Users\RatMa\Desktop\PBoard\app.pyw", line 279, in save_rack_state
+    self.settings.setValue("rack", json.dumps(self.rack.state()))
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RatMa\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RatMa\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\RatMa\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\RatMa\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type WeakTypeWrapper is not JSON serializable
+
+
+----------------------------------------------------------------------
+2026-07-22 15:06:19  UNCAUGHT
+Traceback (most recent call last):
+  File "C:\Users\RatMa\Desktop\PBoard\src\plugins_rack\vst.py", line 252, in on_browse
+    self.load_plugin_at(path)
+  File "C:\Users\RatMa\Desktop\PBoard\src\plugins_rack\vst.py", line 307, in load_plugin_at
+    self.editor_button.setEnabled(True)
+RuntimeError: Internal C++ object (PySide6.QtWidgets.QPushButton) already deleted.
+
